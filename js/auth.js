@@ -63,3 +63,6 @@ async function logout(){
     return await auth.signOut();
 }
 
+auth.onAuthStateChanged(async (user) => {
+    setupUI(user);
+});
